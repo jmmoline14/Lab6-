@@ -11,6 +11,17 @@ def encode(to_be_encoded):
     print(new_list)
     return new_list
 
+
+# Caleb Gottlieb
+def decode(encoded):
+    decoded=''
+    for i in range(len(encoded)):
+        temp=int(encoded[i])-3
+        if(temp<0):
+            temp=10+temp
+        decoded+=str(temp)
+    return decoded
+
 if __name__ == '__main__':
 
     while True:
@@ -23,7 +34,7 @@ if __name__ == '__main__':
         elif user_input == 3:
             break
         elif user_input == 2:
-            decode(encoded_value)
-            print(f'The encoded password is {encoded_value} and the original value password is {to_be_encoded} ')
+            decoded_p=decode(encoded_value)
+            print(f'The encoded password is {encoded_value} and the original value password is {decoded_p} ')
 
 
